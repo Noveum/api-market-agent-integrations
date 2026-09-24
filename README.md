@@ -43,6 +43,18 @@ The plugin configures the hosted Streamable HTTP gateway at `https://api.market/
 
 The Claude Code plugin and marketplace manifests are validated with `claude plugin validate`. On September 24, 2026, Claude Code v2.1.281 loaded the plugin via `--plugin-dir`, completed OAuth in `/mcp`, and connected with all five gateway tools plus resource and prompt capabilities. No model-driven API execution or paid operations were performed during this client connection test. The independent live OAuth and MCP protocol audit is described below.
 
+## Gemini CLI extension
+
+Install the extension from this repository:
+
+```sh
+gemini extensions install https://github.com/Noveum/api-market-agent-integrations
+```
+
+The root `gemini-extension.json` configures `https://api.market/api/mcp/gateway` using Gemini CLI’s `httpUrl` Streamable HTTP transport. In an interactive Gemini session, use `/mcp auth api-market` to complete OAuth with your API.market account. Never put credentials in the manifest.
+
+Manifest validation and isolated local extension loading are tested with Gemini CLI 0.26.0. A full authenticated Gemini session and API execution have not been tested; the separate live protocol audit below does not replace a client-specific test. Gallery indexing is automatic after repository tagging and remains subject to the gallery’s validation.
+
 ## What agents can do
 
 The gateway advertises a catalog of 580+ APIs for image and video generation, search, scraping, maps, data and other workflows. Five gateway tools expose discovery and execution:

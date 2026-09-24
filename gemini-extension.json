@@ -1,0 +1,10 @@
+{
+  "name": "api-market",
+  "version": "1.0.0",
+  "description": "Discover and call APIs through API.market’s hosted MCP gateway with OAuth. API-specific free tiers and paid plans.",
+  "mcpServers": {
+    "api-market": {
+      "httpUrl": "https://api.market/api/mcp/gateway"
+    }
+  }
+}
