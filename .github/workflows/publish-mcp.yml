@@ -1,0 +1,32 @@
+name: Publish API.market MCP Registry listing
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Check out reviewed metadata
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - name: Install verified MCP publisher
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 2 --max-time 90 --output publisher.tar.gz https://github.com/modelcontextprotocol/registry/releases/download/v1.8.1/mcp-publisher_linux_amd64.tar.gz
+          echo "a06c9096dcb9727c13555b6be26c7effa707b01f06a4c561ba7a3635443cf2cc  publisher.tar.gz" | sha256sum --check
+          tar xzf publisher.tar.gz mcp-publisher
+      - name: Authenticate with GitHub OIDC
+        run: ./mcp-publisher login github-oidc
+      - name: Publish remote gateway metadata
+        run: ./mcp-publisher publish

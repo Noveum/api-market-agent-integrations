@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Noveum/api-market-gateway",
+  "title": "API.market MCP Gateway",
+  "description": "Connect AI agents to 580+ APIs with OAuth or API-key auth. Hosted gateway; API pricing varies.",
+  "version": "3.0.0",
+  "websiteUrl": "https://api.market/mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.market/api/mcp/gateway"
+    }
+  ]
+}
