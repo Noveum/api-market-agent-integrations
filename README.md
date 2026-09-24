@@ -30,6 +30,19 @@ You can connect without waiting for marketplace review. Add this configuration i
 
 Complete OAuth sign-in when prompted. See the [live setup instructions](https://api.market/mcp) for API-key authentication and other supported clients.
 
+## Claude Code plugin
+
+Add this repository as a plugin marketplace in Claude Code:
+
+```text
+/plugin marketplace add Noveum/api-market-agent-integrations
+/plugin install api-market@api-market
+```
+
+The plugin configures the hosted Streamable HTTP gateway at `https://api.market/api/mcp/gateway`. Open `/mcp` to authenticate with your API.market account through OAuth. This is an API.market-maintained integration; inclusion in an official client marketplace is not implied.
+
+The Claude Code plugin and marketplace manifests are validated with `claude plugin validate`. An installed Claude Code client session has not yet been tested; the independent live OAuth and MCP protocol audit is described below.
+
 ## What agents can do
 
 The gateway advertises a catalog of 580+ APIs for image and video generation, search, scraping, maps, data and other workflows. Five gateway tools expose discovery and execution:

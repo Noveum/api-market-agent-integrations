@@ -1,0 +1,15 @@
+{
+  "name": "api-market",
+  "owner": { "name": "API.market", "email": "shashank@noveum.ai" },
+  "metadata": {
+    "description": "API.market hosted MCP gateway integration for AI agents",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "api-market",
+      "source": "./plugins/api-market",
+      "description": "Discover and call 580+ APIs through the API.market hosted MCP gateway."
+    }
+  ]
+}
