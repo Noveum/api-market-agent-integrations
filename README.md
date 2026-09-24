@@ -41,7 +41,7 @@ Add this repository as a plugin marketplace in Claude Code:
 
 The plugin configures the hosted Streamable HTTP gateway at `https://api.market/api/mcp/gateway`. Open `/mcp` to authenticate with your API.market account through OAuth. This is an API.market-maintained integration; inclusion in an official client marketplace is not implied.
 
-The Claude Code plugin and marketplace manifests are validated with `claude plugin validate`. An installed Claude Code client session has not yet been tested; the independent live OAuth and MCP protocol audit is described below.
+The Claude Code plugin and marketplace manifests are validated with `claude plugin validate`. On September 24, 2026, Claude Code v2.1.281 loaded the plugin via `--plugin-dir`, completed OAuth in `/mcp`, and connected with all five gateway tools plus resource and prompt capabilities. No model-driven API execution or paid operations were performed during this client connection test. The independent live OAuth and MCP protocol audit is described below.
 
 ## What agents can do
 
