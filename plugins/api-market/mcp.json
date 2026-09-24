@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "api-market": {
+      "url": "https://api.market/api/mcp/gateway"
+    }
+  }
+}

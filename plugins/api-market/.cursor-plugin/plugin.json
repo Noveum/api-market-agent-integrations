@@ -1,0 +1,10 @@
+{
+  "name": "api-market",
+  "displayName": "API.market MCP Gateway",
+  "version": "1.0.0",
+  "description": "Connect AI agents to 580+ APIs through a hosted OAuth MCP gateway. API pricing and free tiers vary.",
+  "author": { "name": "API.market", "email": "shashank@noveum.ai" },
+  "keywords": ["mcp", "api", "oauth", "agents", "image-generation", "web-search"],
+  "logo": "assets/logo.png",
+  "mcpServers": "mcp.json"
+}
