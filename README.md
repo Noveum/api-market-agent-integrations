@@ -2,6 +2,10 @@
 
 Connect AI agents to the [API.market hosted MCP Gateway](https://api.market/mcp). This repository contains client integration metadata and setup documentation, not the implementation of the hosted service.
 
+## Canonical gateway connection
+
+Use `https://api.market/api/mcp/gateway` for new hosted gateway connections. The [MCP Gateway guide](docs/mcp-gateway.md) explains OAuth, API-key setup, the five-tool workflow, pricing and the distinction from older product-specific examples.
+
 ## Cursor plugin
 
 The `api-market` plugin in `plugins/api-market` configures this Streamable HTTP endpoint:
